@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class Test23Config(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'test23'
+    name = 'hotel_info'
