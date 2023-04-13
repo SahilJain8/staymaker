@@ -3,11 +3,11 @@
 <head>
   <title>Django Table Data</title>
   {% load static %}
-  <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
-  <h1>Table Data from Django</h1>
-  <input type="text" id="searchInput" placeholder="Search...">
+  <h1 style="text-align: center;">Table Data from Django</h1>
+  <input style="text-align: center;" type="text" id="searchInput" placeholder="Search...">
   <button onclick="searchTable()">Search</button>
   <table id="dataTable">
     <thead>
