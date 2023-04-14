@@ -20,7 +20,8 @@ def logout_view(request):
     return redirect('login')
 
 
-
+def index(reuqest):
+    return render(reuqest,"index.html")
 
 
 def register(request):
