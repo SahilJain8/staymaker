@@ -2,6 +2,12 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
+
+def index(reuqest):
+    return render(reuqest,"base.html")
+
+
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -11,17 +17,13 @@ def login_view(request):
             login(request, user)
             return redirect('home')
         else:
-            return render(request, 'login.html', {'error_message': 'Invalid login credentials'})
+            return render(request, 'login_page/login.html', {'error_message': 'Invalid login credentials'})
     else:
-        return render(request, 'login.html')
+        return render(request, 'login_page/login.html')
 
 def logout_view(request):
     logout(request)
     return redirect('login')
-
-
-def index(reuqest):
-    return render(reuqest,"base.html")
 
 
 def register(request):
@@ -32,4 +34,4 @@ def register(request):
             return redirect('home')
     else:
         form = RegisterForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'login_page/register.html', {'form': form})
