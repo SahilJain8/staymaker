@@ -55,12 +55,3 @@ class ScapeHotels(models.Model):
         db_table = 'scape_hotels'
 
 
-class UserTable(models.Model):
-    user_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    email = models.CharField(unique=True, max_length=254)
-    password = models.CharField(max_length=255)
-    ph = models.CharField(max_length=20)
-
-    class Meta:
-        db_table = 'user_table'
