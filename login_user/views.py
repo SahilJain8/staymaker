@@ -21,7 +21,7 @@ def logout_view(request):
 
 
 def index(reuqest):
-    return render(reuqest,"index.html")
+    return render(reuqest,"base.html")
 
 
 def register(request):
